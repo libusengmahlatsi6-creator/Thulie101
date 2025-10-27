@@ -228,22 +228,6 @@
 					});
 				});
 				
-				// Navigation toggles
-				const navToggles = document.querySelectorAll('.nav-toggle-button');
-				navToggles.forEach(toggle => {
-					toggle.addEventListener('click', function() {
-						const navList = this.closest('.inpage-nav-box').querySelector('ul');
-						if (navList) {
-							navList.classList.toggle('collapsed');
-							this.textContent = navList.classList.contains('collapsed') ? '+' : '-';
-							this.setAttribute('aria-expanded', !navList.classList.contains('collapsed'));
-						}
-					});
-				});
-				
-				// Set first tab as active by default
-				const firstTab = document.querySelector('.tab-content.active');
-				if (firstTab) {
 					firstTab.style.display = 'block';
 				}
 			});
